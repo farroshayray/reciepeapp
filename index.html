@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Recipe Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="company-logo">
+        <img src="./src/asset/applogo.png" alt="company-logo" class="logo1">
+        <p class="logo-text">RANDCIPE</p>
+      </div>
+      <div class="nav-link">
+        <a href="#">For Contributor</a>
+        <a href="#">Contact</a>
+      </div>
+      <button class="nav-button">
+        <img src="./src/asset/icons8-prince-90.png" alt="premium Logo" title="premium logo">
+        <p>Try Premium</p>
+      </button>
+    </nav>
+    <div class="firstContainer">
+      <h1>Random Recipe Finder</h1>
+      <p>challenge yourself, what to cook today?</p>
+      <button id="getRecipeBtn" class="getRecipeButton">Get Random Recipe</button>
+      <div class="firstContainer1" id="firstContainer1" style="">
+        <div id="recipeContainer" class="recipe-container">
+        <!-- Recipe details will be displayed here -->
+          <div class="mealImage">
+            <img id="mealImage" src="./src/asset/comfortFoods.jpg" alt="meal Image"> <!-- id="mealImage" refers to src=" " that will be replaced by recipe.image in javascript -->
+          </div>
+          <table>
+            <tr>
+              <td>Recipe Title</td>
+              <td>&nbsp;:</td>
+              <td id="mealName"></td><!-- id="mealName" refers to innerHTML that will be replaced by recipe.title in javascript -->
+            </tr>
+            <tr>
+              <td>Origin</td>
+              <td>&nbsp;:</td>
+              <td id="mealOrigin"></td>
+            </tr>
+            <tr>
+              <td>Category</td>
+              <td>&nbsp;:</td>
+              <td id="mealCategory"></td>
+            </tr>
+            <tr>
+              <td class="ingredients">Ingredients</td>
+              <td class="ingredients">&nbsp;:</td>
+              <td id="mealIngredients"></td>
+            </tr>
+          </table>
+          <div class="mealTutorial">
+            <h4>How to make</h4>
+            <p id="mealInstruction">mealTutorial asfsdf safsaf safd as fsfda fasdfsda sfad asf sdfsa fasfasdfsdf</p><br><!-- id="mealInstruction" refers to innerHTML that will be replaced by recipe.instructions in javascript -->
+          </div>
+          <div class="mealYoutube">
+            <p>Youtube:</p>
+            <iframe src="" frameborder="0" class="youtubeVideo" id="mealYoutube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>No Data</iframe>
+          </div>
+          
+        </div>
+      </div>
+      <button id="refreshBtn">Randomize</button>
+      <button id="minimize">Minimize</button>
+      <div>Search Your Recipe by Name</div>
+      <div>
+        <input id="input-search" class="input-search" type="text" placeholder='try: "chicken"'>
+        <button id="button-search" class="button-search">Search</button>
+      </div>
+      <div id="meal-container"></div>
+      <div id="meal-detail-container"></div>
+      <div class="footer-container">
+        <div class="footer-content">
+          <h4>About Us</h4>
+          <p>Welcome to Random Recipe Finder! We are passionate about helping you discover new and exciting recipes from around the world. Whether you're a seasoned chef or a beginner in the kitchen, our platform offers a variety of recipes to inspire your culinary adventures. Join us in exploring diverse cuisines and enjoy the joy of cooking!</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
