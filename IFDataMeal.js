@@ -1,4 +1,14 @@
 function renderMealCards(data, mealContainer) {
+    if (data.meals === null || data.meals === undefined) {
+        const notFoundElement = document.createElement('div');
+      notFoundElement.classList.add('not-found');
+      notFoundElement.textContent = 'Data not found, try another keyword';
+      mealContainer.appendChild(notFoundElement);
+      mealContainer.style.display = 'flex';
+      mealContainer.style.margin = '5vw 0 5vw 0';
+        console.log('Data tidak ditemukan');
+        return;
+      }
     data.meals.forEach(meal => {
       const card = document.createElement('div');
       card.classList.add('card', 'card-style');
