@@ -12,6 +12,7 @@ function renderMealCards(data, mealContainer) {
     data.meals.forEach(meal => {
       const card = document.createElement('div');
       card.classList.add('card', 'card-style');
+      //scroll into meal-detail-container
       // img
       const image = document.createElement('img');
       image.src = meal.strMealThumb;
@@ -64,9 +65,12 @@ function renderMealCards(data, mealContainer) {
         closeButton.addEventListener('click', () => {
           mealDetailContainer.innerHTML = '';
           document.getElementById('meal-container').style.display = 'grid'; // show meal-container
+          const inputSearch = document.getElementById('firstContainer');
+            const inputSearchTop = inputSearch.offsetTop;
+            window.scrollTo({ top: inputSearchTop, behavior: 'smooth' });
+});
         });
       });
-    });
-}
+    }
    
 export {renderMealCards};
